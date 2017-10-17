@@ -57,7 +57,7 @@ switch (ceilingType) {
 ```
 The way user's input are captured is using the `UITextFieldDelegate` and `UISwitch`'s `isOn` property is set to true. Whenever the user types in the text field, the delegate listens records it in a `[String: Any]` dictionary. This raw data will be passed into `CalculationDataPoint` which is a struct with all possible inputs as it's properties (these properties are optionals). This `CalculationDataPoint` struct will then be passed into the concrete types where all the actual calcuations will happen. Once the outputs are ready, the dictionary will then passed into the output layer and populates the `UITableView`
 
-# Error throwing
+## Error throwing
 
 Errors are thrown inside of the concrete types during the calculation and the `UserInputViewController` catches those errors and handles them using `UIAlertController`
 
